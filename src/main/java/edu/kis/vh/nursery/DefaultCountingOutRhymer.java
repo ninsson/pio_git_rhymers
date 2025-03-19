@@ -5,6 +5,7 @@ public class DefaultCountingOutRhymer {
     public static final int TOTAL = -1;
     public static final int tab_size = 12;
     private final int[] NUMBERS = new int[tab_size];
+    public int RET_VAL = -1;
 
     public int total = TOTAL;
 
@@ -18,18 +19,18 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean isFull() {
-        return total == 11;
+        return total == tab_size - 1;
     }
 
     protected int peekaboo() {
         if (callCheck())
-            return TOTAL;
+            return RET_VAL;
         return NUMBERS[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return TOTAL;
+            return RET_VAL;
         return NUMBERS[total--];
     }
 
