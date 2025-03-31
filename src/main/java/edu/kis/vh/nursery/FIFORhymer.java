@@ -16,4 +16,5 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
         return ret;
     }
+    // TODO: Implement a method to reset the rhymer
 }
